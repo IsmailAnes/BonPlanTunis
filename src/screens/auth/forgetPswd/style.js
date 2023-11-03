@@ -1,0 +1,35 @@
+import {StyleSheet} from 'react-native';
+export default styles = (colors, fonts) =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: colors.background,
+    },
+    upperContainer: {
+     flex:1,
+      padding: 20,
+      justifyContent: 'space-between',
+    },
+    title: {
+      fontFamily: fonts.bold,
+      fontSize: 30,
+      color: colors.textPrimary,
+    },
+    subTitle: {
+      fontFamily: fonts.light,
+      fontSize: 18,
+      color: colors.textGrey,
+    },
+    downContainer: {
+      flex:1,
+      backgroundColor:'red',
+      height: '20%',
+      flexDirection: 'row',
+      justifyContent: 'center',
+    },
+    forgetpswdText:{
+      color:colors.primary,
+      fontFamily:fonts.light,
+      alignSelf:'flex-end'
+    }
+  });
