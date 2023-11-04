@@ -5,5 +5,5 @@ export default styles = (colors, finish,transparent) =>
       flex: 1,
       backgroundColor: finish ? colors.primary : transparent ? 'transparent' : colors.background,
     },
-    mainContainer: {flex: 1, paddingTop: 24},
+    mainContainer: {flex: 1, paddingTop: 24, paddingLeft:10, paddingRight:10},
   });

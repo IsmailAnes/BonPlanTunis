@@ -6,6 +6,7 @@ import HomeScreen from '../src/screens/appScreens/homeScreen';
 import SearchScreen from '../src/screens/appScreens/searchScreen';
 import ProfileScreen from '../src/screens/appScreens/profileScreen';
 import EventScreen from '../src/screens/appScreens/eventScreen';
+import AddPostScreen from '../src/screens/appScreens/addPostScreen';
 
 const Tab = createBottomTabNavigator();
 export function Tabs() {
@@ -92,7 +93,47 @@ export function Tabs() {
         })}
       />
 
-<Tab.Screen
+      <Tab.Screen
+        name="add"
+        component={AddPostScreen}
+        options={({focused}) => ({
+          tabBarLabel: ({focused}) => {
+            return (
+              <Text
+                style={{
+                  fontSize: 14,
+                  color: colors.primary,
+                  fontFamily: fonts.regular,
+                }}>
+                {focused ? '' : ''}
+              </Text>
+            );
+          },
+          headerTitle: '',
+          highLightContent: {
+            title: `Page d'accueil`,
+            message: 'Gardez un oeil sur les annonces.',
+          },
+          tabBarHideOnKeyboard: true,
+          headerShown: false,
+          tabBarIcon: ({focused}) => (
+            <Image
+              style={{
+                width: 60,
+                height: 60,
+                resizeMode: 'contain',
+              }}
+              source={
+                focused
+                  ? require('../src/assets/tabIcons/addS.png')
+                  : require('../src/assets/tabIcons/add.png')
+              }
+            />
+          ),
+        })}
+      />
+
+      <Tab.Screen
         name="event"
         component={EventScreen}
         options={({focused}) => ({
@@ -103,7 +144,7 @@ export function Tabs() {
                   fontSize: 14,
                   color: colors.primary,
                   fontFamily: fonts.regular,
-                  textTransform:'capitalize'
+                  textTransform: 'capitalize',
                 }}>
                 {focused ? 'événements' : ''}
               </Text>

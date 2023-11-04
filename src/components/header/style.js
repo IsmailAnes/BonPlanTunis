@@ -11,8 +11,8 @@ export default styles = (colors, fonts, white) =>
     title: {
       fontFamily: fonts.bold,
       color: white ? colors.card : colors.text,
-      fontSize: 14,
-      paddingHorizontal: 20,
+      fontSize: 16,
+      //paddingHorizontal: 20,
       textAlign: 'center',
     },
     backContainer: {position: 'absolute', left: 15},

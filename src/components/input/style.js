@@ -3,9 +3,9 @@ export default styles = (colors, register, size, editable) =>
   StyleSheet.create({
     container: {
       width: size === 'large' ? '100%' : '48%',
-      backgroundColor: register ? colors.background : colors.background,
-      borderWidth: register ? 0.4 : 0,
-      borderColor: register ? colors.textPrimary : 'transparent',
+      backgroundColor: register ? colors.background : 'white',
+      borderWidth: register ? 0.4 : 0.4,
+      borderColor: register ? colors.textPrimary : colors.textPrimary,
       borderTopLeftRadius: 10,
       borderTopRightRadius: 10,
       borderBottomLeftRadius: 10,

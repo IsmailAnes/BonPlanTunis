@@ -52,7 +52,7 @@ export default function LoginScreen({navigation}) {
           label={'CONTINUER'}
           size={'large'}
           backgroundColor={colors.primary}
-          onPress={() => null}
+          onPress={() => navigation.navigate('tabs')}
           style={{marginBottom:20}}
         />
       </View>

@@ -37,7 +37,7 @@ export default function LandingScreen({navigation}) {
       if (scrollViewRef.current) {
         scrollViewRef.current.scrollTo({x: scrollValue, animated: true});
       }
-    }, 4000);
+    }, 3000);
 
     // Clear the interval when the component unmounts
     return () => clearInterval(interval);
