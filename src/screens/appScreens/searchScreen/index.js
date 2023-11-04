@@ -12,7 +12,6 @@ export default function SearchScreen({navigation}) {
   const styles = useStyles(colors, fonts);
   return (
     <Container>
-      <Header />
       <View style={styles.upperContainer}>
         <View style={{flex:1}}>
           <Text style={styles.title}>Search</Text>

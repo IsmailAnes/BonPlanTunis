@@ -12,7 +12,7 @@ export default function EventScreen({navigation}) {
   const styles = useStyles(colors, fonts);
   return (
     <Container>
-      <Header />
+      
       <View style={styles.upperContainer}>
         <View style={{flex:1}}>
           <Text style={styles.title}>Profile</Text>

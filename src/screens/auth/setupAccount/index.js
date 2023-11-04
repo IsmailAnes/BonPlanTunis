@@ -89,9 +89,10 @@ export default function SetupAccount({navigation}) {
     const isSelected = selectedTopics.includes(item);
     return (
       <TouchableOpacity
-        style={
-          isSelected ? styles.topicContainerSelected : styles.topicContainer
+        style={[
+          isSelected ? styles.topicContainerSelected : styles.topicContainer,{opacity:selectedTopics?.length >=5 && !selectedTopics.includes(item) && .5}]
         }
+        disabled={selectedTopics.includes(item) ? false : selectedTopics?.length>=5 ? true : false}
         onPress={() => toggleTopicSelection(item)}>
         <Text>{emoji}</Text>
         <Text style={isSelected ? styles.topicTextSelected : styles.topicText}>{text}</Text>
